@@ -46,3 +46,12 @@ with urlopen('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qv
         name_date.append(movie_name1[i]+'\n'+movie_update[i])
     # print(name_date)
 #여기까지 '이은희'의 크롤러 코딩
+
+    figure = []
+    for i in range(len(movie_poplaration)):
+        k = movie_poplaration[i]
+        p = k[0] + k[1] + k[3] + k[4] + k[5] + k[7] + k[8] + k[9]
+        p = int(p)
+        figure.append(p)
+#    print(figure)
+#여기까지 '추정훈'의 리스트 원소 변환 코딩
