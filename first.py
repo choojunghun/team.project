@@ -55,3 +55,11 @@ with urlopen('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qv
         figure.append(p)
 #    print(figure)
 #여기까지 '추정훈'의 리스트 원소 변환 코딩
+
+    x = [0, 1, 2, 3, 4, 5, 6, 7]
+    plt.rcParams['font.family'] = 'Malgun Gothic'
+    plt.suptitle("역대 박스오피스 영화 순위에 따른 누적관계수")
+    plt.bar(x, figure)
+    plt.xticks(x, name_date)
+    plt.show()
+#여기까지 '이은희'의 그래프 코딩
