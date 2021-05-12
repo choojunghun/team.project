@@ -21,3 +21,28 @@ with urlopen('https://search.naver.com/search.naver?where=nexearch&sm=tab_etc&qv
         print(str(rank) + " 위 : " + name)
         rank += 1
 #여기까지 '추정훈'의 그래프 코딩
+
+    movie_content = movie.select('dd')
+    x = []
+    movie_poplaration=[]
+    for i in movie_content:
+        x.append(i.text)
+    for j in range(len(movie_content)):
+        if j % 2 == 1:
+            movie_poplaration.append(x[j])
+    # print(movie_poplaration)
+
+    y=[]
+    movie_update = []
+    for i in movie_content:
+        y.append(i.text)
+    for j in range(len(movie_content)):
+        if j % 2 == 0 :
+            movie_update.append(y[j])
+    # print(movie_update)
+
+    name_date = []
+    for i in range(len(movie_update)):
+        name_date.append(movie_name1[i]+'\n'+movie_update[i])
+    # print(name_date)
+#여기까지 '이은희'의 크롤러 코딩
